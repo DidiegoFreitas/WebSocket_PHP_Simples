@@ -36,10 +36,10 @@
             $conn->close();
         }
 
-        public function defaultComunication($messageOrigin, $messageDestination, $originalMessage) {
+        public function defaultComunication($origin, $destination, $originalMessage) {
             $defaultMsg = array(
-                'origin' => $messageOrigin,
-                'destination' => $messageDestination,
+                'origin' => $origin->resourceId,
+                'destination' => $destination->resourceId,
                 'msg' => $originalMessage,
             );
 
